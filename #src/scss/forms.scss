@@ -24,13 +24,11 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 10px 25px;
-	// min-width: 144px;
-	// min-height: 36px;
-	font-size: 12px;
-	font-weight: 400;
+	padding: 30px 45px;
+	font-weight: 500;
+	font-size: 18px;
 	color: #000;
-	background: #FFE417;
+	background: #33E445;
 	border-radius: 5px;
 
 	&:hover {}
@@ -261,10 +259,13 @@ textarea {
 .input {
 	display: flex;
 	width: 100%;
-	height: 30px;
+	height: 72px;
+	font-weight: 500;
+	font-size: 18px;
+	color: #ACACAC;
 	padding: 0px 15px;
+	border: 2px solid #E9E9E9;
 	border-radius: 5px;
-	border: 1px solid #000;
 
 	&._focus {
 		background: grey;
@@ -292,21 +293,21 @@ textarea.input {
 
 // Стилизация placeholder 
 ::-webkit-input-placeholder {
-	color: #8584847a;
+	color: #ACACAC;
 }
 
 ::-moz-placeholder {
-	color: #8584847a;
+	color: #ACACAC;
 }
 
 /* Firefox 19+ */
 :-moz-placeholder {
-	color: #8584847a;
+	color: #ACACAC;
 }
 
 /* Firefox 18- */
 :-ms-input-placeholder {
-	color: #8584847a;
+	color: #ACACAC;
 }
 
 // Убираем стрелки у цифрового инпута
