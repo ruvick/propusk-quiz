@@ -7,7 +7,32 @@
 
 //<Подключаем шрифты>=======================================================================================
 //&display=swap&subset=cyrillic-ext
-@import "fonts";
+// @import "fonts";
+
+@font-face {
+	font-family: 'Stolzl';
+	src: url('../fonts/Stolzl-Regular.eot');
+	src: local('☺'), url('../fonts/Stolzl-Regular.woff') format('woff'), url('../fonts/Stolzl-Regular.ttf') format('truetype'), url('../fonts/Stolzl-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl';
+	src: url('../fonts/Stolzl-Medium.eot');
+	src: local('☺'), url('../fonts/Stolzl-Medium.woff') format('woff'), url('../fonts/Stolzl-Medium.ttf') format('truetype'), url('../fonts/Stolzl-Medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl';
+	src: url('../fonts/Stolzl-Bold.eot');
+	src: local('☺'), url('../fonts/Stolzl-Bold.woff') format('woff'), url('../fonts/Stolzl-Bold.ttf') format('truetype'), url('../fonts/Stolzl-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
 //</Подключаем шрифты>=======================================================================================
 
 //<Иконочные шрифты>==========================================================================================
@@ -15,9 +40,10 @@
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontFamily: "";
+$fontFamily: "Stolzl";
 $fontSize: 16;
 $fontWeight: 400;
+$line-height: 19.2px;
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>======================================================================================================= 
@@ -25,7 +51,7 @@ $fontWeight: 400;
 //<ПЕРЕМЕННЫЕ>==========================================================================================================
 $minWidth: 320px;
 $maxWidth: 1920;
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1242;
 $md1: $maxWidthContainer+12;
 $md2: 991.98;
 $md3: 767.98;
@@ -41,11 +67,12 @@ $mainColor: #000;
 body {
 	font-weight: $fontWeight;
 	color: $mainColor;
+	line-height: $line-height;
 	// background: #333;
 
 	a {
 		font-family: "Lato";
-		color: #1a1818;
+		color: #000;
 	}
 
 	&._lock {
