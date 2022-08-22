@@ -13,6 +13,14 @@
 	.about__column {
 		padding: 0 10px;
 	}
+
+	.partners__column {
+		padding: 0 5px;
+	}
+
+	.partners__inner {
+		margin: 0 -5px;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -44,6 +52,19 @@
 
 	.about__card-icon {
 		margin-bottom: 20px;
+	}
+
+	.partners__inner {
+		flex-wrap: wrap;
+	}
+
+	.partners__column {
+		padding-bottom: 5px;
+		flex: 0 1 33%;
+	}
+
+	.partners__img {
+		flex: 0 1 100%;
 	}
 }
 
@@ -202,6 +223,30 @@
 		background-size: 70%;
 		background-position: center;
 	}
+
+	.consultation__block {
+		padding: 25px 15px;
+	}
+
+	.consultation__block-form-label {
+		flex: 0 1 50%;
+		padding: 2.5px;
+		margin-right: 0;
+	}
+
+	.consultation__block-form-label .input {
+		height: 45px;
+		font-size: 16px;
+	}
+
+	.consultation__block-form-btn {
+		margin-top: 15px;
+	}
+
+	.consultation__block-form-btn .btn {
+		padding: 15px 20px;
+		font-size: 16px;
+	}
 }
 
 @media (max-width: 700px) {
@@ -263,6 +308,10 @@
 		flex: 0 1 50%;
 		padding-bottom: 10px;
 	}
+
+	.partners__img {
+		height: 100px;
+	}
 }
 
 @media (max-width: 515px) {
@@ -281,6 +330,10 @@
 
 	.popup__form-block {
 		flex: 0 1 100%;
+	}
+
+	.about__card-text {
+		font-size: 12px;
 	}
 }
 
@@ -323,11 +376,37 @@
 	.header .logo-icon {
 		flex: 0 0 100px;
 	}
+
+	.partners__column {
+		flex: 0 1 50%;
+	}
+
+	.consultation__block-form-inner {
+		flex-wrap: wrap;
+	}
+
+	.consultation__block-form-label {
+		flex: 0 1 100%;
+		margin-bottom: 5px;
+	}
+
+	.consultation__block-form-btn .btn,
+	.consultation__block-form-btn {
+		width: 100%;
+	}
 }
 
 @media (max-width: 460px) {
 	.info__btn-block-text {
 		margin-bottom: 10px;
+	}
+
+	.about__card-text {
+		font-size: 10px;
+	}
+
+	.consultation__block-title {
+		line-height: 1.2;
 	}
 }
 
@@ -341,6 +420,7 @@
 		width: 100%;
 		margin-right: 0;
 	}
+
 }
 
 @media (max-width: 385px) {
@@ -361,5 +441,41 @@
 
 	.header .naviganion__contacts-phone {
 		font-size: 12px;
+	}
+
+	.about__card-line {
+		flex-direction: row;
+		padding: 10px 5px;
+	}
+
+	.about__card-text {
+		text-align: left;
+	}
+
+	.about__card-text br {
+		display: none;
+	}
+
+	.about__card-icon {
+		width: 35px;
+		height: 35px;
+		flex: 0 0 35px;
+		margin-bottom: 0;
+	}
+
+	.about__card-icon::before {
+		background-size: 50%;
+	}
+
+	.about__card-icon {
+		margin-right: 8px;
+	}
+
+	.about__column {
+		flex: 0 1 100%;
+	}
+
+	.consultation__block-form-btn .btn {
+		font-size: 14px;
 	}
 }
