@@ -201,6 +201,12 @@ h4 {
   margin-bottom: 10px;
 }
 
+.btn-wrap {
+  padding: 4px;
+  background: #33E445;
+  border-radius: 5px;
+}
+
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -211,6 +217,7 @@ h4 {
   font-size: 18px;
   color: #000;
   background: #33E445;
+  border: 2px solid #78F785;
   border-radius: 5px;
 }
 .btn.fw {
@@ -3239,11 +3246,36 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .info__list-item {
+  position: relative;
+  display: flex;
   color: #fff;
   margin-bottom: 25px;
 }
 .info__list-item:last-child {
   margin-bottom: 0;
+}
+.info__list-item::before {
+  content: "";
+  float: left;
+  width: 24px;
+  height: 24px;
+  background: #E8FCE8;
+  border: 2px solid #33E445;
+  border-radius: 5px;
+  margin-top: -4px;
+  margin-right: 15px;
+}
+.info__list-item::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  width: 10px;
+  height: 8px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("../img/jackdaw.svg");
 }
 
 .info__btn-block {

@@ -19,6 +19,12 @@
 //</FORM>====================================================================================================
 
 //<BUTTONS (a.btn+tab)>====================================================================================================
+.btn-wrap {
+	padding: 4px;
+	background: #33E445;
+	border-radius: 5px;
+}
+
 .btn {
 	display: inline-flex;
 	justify-content: center;
@@ -29,6 +35,7 @@
 	font-size: 18px;
 	color: #000;
 	background: #33E445;
+	border: 2px solid #78F785;
 	border-radius: 5px;
 
 	&:hover {}

@@ -234,11 +234,39 @@ h4 {
 .info__list {}
 
 .info__list-item {
+	position: relative;
+	display: flex;
+	// align-items: center;
 	color: #fff;
 	margin-bottom: 25px;
 
 	&:last-child {
 		margin-bottom: 0;
+	}
+
+	&::before {
+		content: '';
+		float: left;
+		width: 24px;
+		height: 24px;
+		background: #E8FCE8;
+		border: 2px solid #33E445;
+		border-radius: 5px;
+		margin-top: -4px;
+		margin-right: 15px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 6px;
+		left: 7px;
+		width: 10px;
+		height: 8px;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-image: url('../img/jackdaw.svg');
 	}
 }
 
@@ -250,6 +278,8 @@ h4 {
 .info__btn-block-button {
 	margin-right: 50px;
 }
+
+.info__btn-block-button-wrap {}
 
 .info__btn-block-text {
 	color: #E8FCE8;
