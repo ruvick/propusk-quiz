@@ -240,7 +240,7 @@
 					</p>
 				</div>
 
-				<form action="#" class="popup__form form">
+				<form action="#" id="q_form" class="popup__form form q_form">
 
 					<div class="q_blk step1 active">
 						<h3 class="popup__form-title">
@@ -248,16 +248,16 @@
 							необходимо оформить?
 						</h3>
 						<div class="options">
-							<label class="options__item">
-								<input class="options__input" checked type="radio" value="1" name="form[option]">
+							<label for="prop_ch_1" class="options__item label_ch">
+								<input id="prop_ch_1" class="options__input" type="radio" value="1 пропуск" name="prop[]">
 								<span class="options__text"><span>1 пропуск</span></span>
 							</label>
-							<label class="options__item">
-								<input class="options__input" type="radio" value="2" name="form[option]">
+							<label for="prop_ch_2" class="options__item label_ch">
+								<input id="prop_ch_2" class="options__input" type="radio" value="2-4 пропуска" name="prop[]">
 								<span class="options__text"><span>2-4 пропуска</span></span>
 							</label>
-							<label class="options__item">
-								<input class="options__input" type="radio" value="3" name="form[option]">
+							<label for="prop_ch_3" class="options__item label_ch">
+								<input id="prop_ch_3" class="options__input" type="radio" value="более 5 пропусков" name="prop[]">
 								<span class="options__text"><span>более 5 пропусков</span></span>
 							</label>
 						</div>
@@ -269,7 +269,7 @@
 						</h3>
 						<div class="options">
 							<label class="options__item">
-								<input class="options__input" checked type="radio" value="4" name="form[option]">
+								<input class="options__input" type="radio" value="4" name="form[option]">
 								<span class="options__text"><span>Физическое лицо</span></span>
 							</label>
 							<label class="options__item">
@@ -283,17 +283,38 @@
 						</div>
 					</div>
 
+					<div class="q_blk step3">
+						<h3 class="popup__form-title">
+							Оставьте свой номер телефона <br>
+							и получите первый пропуск <br>
+							на 10 дней БЕСПЛАТНО
+						</h3>
+						<label for="name" class="popup__block-form-label">
+							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="ВАШЕ ИМЯ"
+								class="input">
+						</label>
+						<label for="tel" class="popup__block-form-label">
+							<input id="tel" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="ВАШ ТЕЛЕФОН"
+								class="input _phone _req">
+						</label>
+						<button type="submit" class="popup__block-form-btn btn-wrap"><span class="btn">Отправить</span></button>
+					</div>
+
 				</form>
 
 			</div>
 			<div class="popup__control controlBlk d-flex">
-				<button class="popup__control-btn popup__control-back">Назад</button>
-				<div class="popup__control-pagination d-flex">
-					<span class="popup__control-pagination-icon active"></span>
-					<span class="popup__control-pagination-icon"></span>
-					<span class="popup__control-pagination-icon"></span>
+				<div class="popup__control-btn-inner">
+					<button id="q_prev" class="popup__control-btn popup__control-back q_prev">Назад</button>
 				</div>
-				<button class="popup__control-btn popup__control-forward">Далее</button>
+				<div class="popup__control-pagination q_steps d-flex">
+					<span class="popup__control-pagination-icon as active"></span>
+					<span class="popup__control-pagination-icon as"></span>
+					<span class="popup__control-pagination-icon all"></span>
+				</div>
+				<div class="popup__control-btn-inner">
+					<button id="q_next" class="popup__control-btn popup__control-forward q_next">Далее</button>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -65,7 +65,7 @@
 		max-width: 700px;
 		width: 100%;
 		// padding: 50px;
-		background: #F5F5F5;
+		background: #fff;
 		transform: scale(0);
 		transition: all 0.3s ease 0s;
 		overflow: hidden;
@@ -163,6 +163,11 @@
 	border-top: 1px solid #E4E4E4;
 }
 
+.popup__control-btn-inner {
+	width: 115px;
+	height: 20px;
+}
+
 .popup__control-btn {}
 
 .popup__control-back {
@@ -184,6 +189,7 @@
 
 .popup__control-pagination {
 	justify-content: center;
+	margin: 0px auto;
 }
 
 .popup__control-forward {
@@ -218,6 +224,33 @@
 
 .popup__control-pagination-icon.active {
 	background: #33E445;
+}
+
+.popup__block-form-label {
+	display: block;
+	max-width: 288px;
+	width: 100%;
+	padding: 4px;
+	background: #F9F9F9;
+	border-radius: 5px;
+	margin-bottom: 20px;
+
+	.input {
+		background: #F9F9F9;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.popup__block-form-btn {
+	max-width: 288px;
+	width: 100%;
+
+	.btn {
+		width: 100%;
+	}
 }
 
 .q_blk {
