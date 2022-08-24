@@ -16,7 +16,7 @@ if (
     }
 
 
-    $to = 'asmi046@gmail.com'; 
+    $to = 'asmi046@gmail.com,zakaz@propuska-mkad-ttk-sk.ru'; 
     $subject = 'Сообщение (quiz) с сайта istmarket77.com';
     $message = '
                 <html>
