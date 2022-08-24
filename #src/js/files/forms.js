@@ -531,6 +531,55 @@ if (priceSlider) {
 }
 // ============================================================================================================
 
+
+	// Заявка на обртаный звонок
+	document.addEventListener('DOMContentLoaded', function () {
+		let send_btns_callBack = document.querySelectorAll("._send_btn_callback")
+		send_btns_callBack.forEach(element => {
+			element.onclick = (e) => {
+				e.preventDefault()
+				let formid = element.dataset.formid;
+				let msg = element.dataset.msg;
+				let form = document.getElementById(formid);
+
+				let name = (form.querySelectorAll("input[name=name]").length == 0) ? "" : form.querySelectorAll("input[name=name]")[0].value;
+				let tel = (form.querySelectorAll("input[name=phone]").length == 0) ? "" : form.querySelectorAll("input[name=phone]")[0].value;
+				if (tel == "Телефон*") { form.querySelectorAll("input[name=phone]")[0].classList.add("_error"); return }
+				
+				var params = new URLSearchParams()
+
+				params.append('name', name)
+				params.append('tel', tel)
+				params.append('msg', msg)
+
+				var xhr = new XMLHttpRequest();
+
+				xhr.onload = function (e) {
+
+					if (xhr.status == 200) {
+
+						location.href = "/thanks.html"
+
+					} else {
+						console.log(xhr.status)
+						console.log(xhr.statusText)
+						alert("При отправке произошла ошибка")
+					}
+
+				}
+
+				xhr.onerror = function (msg) {
+					console.log("eroroa" + xhr.statusText)
+				}
+
+				xhr.open('POST', "https://istmarket77.com/sender.php", true);
+				xhr.send(params);
+			}
+		})
+
+	})
+
+
 // Отправка файла плагином PHPMailer ==========================================================================
 // document.addEventListener('DOMContentLoaded', function () {
 // 	const form = document.getElementById('form');

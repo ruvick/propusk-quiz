@@ -454,7 +454,7 @@ textarea:focus {
 }
 
 .input._focus {
-  background: grey;
+  background: #eeeeee;
 }
 
 .input._error {

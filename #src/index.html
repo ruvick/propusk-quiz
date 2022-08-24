@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('_head.html',{
-"title":"Главная"
+"title":"МКАД, ТТК, СК по старой цене - МОСПРОПУСК"
 })
 
 <body>
@@ -132,18 +132,18 @@
 						<h2 class="consultation__block-title title">
 							Хотите получить консультацию?
 						</h2>
-						<form action="#" class="consultation__block-form">
+						<form id = "footer_form" action="#" class="consultation__block-form">
 							<div class="consultation__block-form-inner d-flex">
 								<label for="name" class="consultation__block-form-label">
-									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="ВАШЕ ИМЯ"
+									<input autocomplete="off" type="text" name="name" data-error="Ошибка" data-value="ВАШЕ ИМЯ"
 										class="input">
 								</label>
 								<label for="tel" class="consultation__block-form-label">
-									<input id="tel" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+									<input id="tel" autocomplete="off" type="text" name="phone" data-error="Ошибка"
 										data-value="ВАШ ТЕЛЕФОН" class="input _phone _req">
 								</label>
 							</div>
-							<button type="submit" class="consultation__block-form-btn btn-wrap"><span class="btn">ПОЛУЧИТЬ
+							<button data-formid="footer_form" data-msg="Сообщение с формы из подвала" type="submit" class="consultation__block-form-btn btn-wrap _send_btn_callback"><span class="btn">ПОЛУЧИТЬ
 									КОНСУЛЬТАЦИЮ</span></button>
 						</form>
 					</div>

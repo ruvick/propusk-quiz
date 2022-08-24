@@ -5,6 +5,12 @@
 	"author": "ruvick",
 	"private": true,
 	"license": "GNU General Public License (GPL)",
+	"scripts": {
+		"send_to_host": "cd propusk-quiz && scp -C -r * manist1h_ruvick@manist1h.beget.tech:istmarket77/public_html",
+		"send_sender": "cd #src && scp sender.php manist1h_ruvick@manist1h.beget.tech:istmarket77/public_html",
+		"send_sender_quiz": "cd #src && scp sender-quiz.php manist1h_ruvick@manist1h.beget.tech:istmarket77/public_html",
+		"deploy": "gulp build && npm run send_to_host && npm run send_sender && npm run send_sender_quiz"
+	},
 	"devDependencies": {
 		"browser-sync": "latest",
 		"del": "latest",

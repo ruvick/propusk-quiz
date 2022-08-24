@@ -24,15 +24,15 @@
 						</h3>
 						<div class="options">
 							<label for="prop_ch_1" class="options__item label_ch">
-								<input id="prop_ch_1" class="options__input" type="radio" value="1 пропуск" name="prop[]">
+								<input id="prop_ch_1" class="options__input" type="radio" value="1 пропуск" name="prop">
 								<span class="options__text"><span>1 пропуск</span></span>
 							</label>
 							<label for="prop_ch_2" class="options__item label_ch">
-								<input id="prop_ch_2" class="options__input" type="radio" value="2-4 пропуска" name="prop[]">
+								<input id="prop_ch_2" class="options__input" type="radio" value="2-4 пропуска" name="prop">
 								<span class="options__text"><span>2-4 пропуска</span></span>
 							</label>
 							<label for="prop_ch_3" class="options__item label_ch">
-								<input id="prop_ch_3" class="options__input" type="radio" value="более 5 пропусков" name="prop[]">
+								<input id="prop_ch_3" class="options__input" type="radio" value="более 5 пропусков" name="prop">
 								<span class="options__text"><span>более 5 пропусков</span></span>
 							</label>
 						</div>
@@ -44,15 +44,15 @@
 						</h3>
 						<div class="options">
 							<label class="options__item">
-								<input class="options__input" type="radio" value="4" name="form[option]">
+								<input class="options__input" type="radio" value="Физическое лицо" name="how">
 								<span class="options__text"><span>Физическое лицо</span></span>
 							</label>
 							<label class="options__item">
-								<input class="options__input" type="radio" value="5" name="form[option]">
+								<input class="options__input" type="radio" value="Юридическое лицо" name="how">
 								<span class="options__text"><span>Юридическое лицо</span></span>
 							</label>
 							<label class="options__item">
-								<input class="options__input" type="radio" value="6" name="form[option]">
+								<input class="options__input" type="radio" value="Индивидуальный предприниматель" name="how">
 								<span class="options__text"><span>Индивидуальный предприниматель</span></span>
 							</label>
 						</div>
@@ -65,14 +65,14 @@
 							на 10 дней БЕСПЛАТНО
 						</h3>
 						<label for="name" class="popup__block-form-label">
-							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="ВАШЕ ИМЯ"
+							<input id="q_name" autocomplete="off" type="text" name="q_name" data-error="Ошибка" data-value="ВАШЕ ИМЯ"
 								class="input">
 						</label>
 						<label for="tel" class="popup__block-form-label">
-							<input id="tel" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="ВАШ ТЕЛЕФОН"
+							<input id="q_tel" autocomplete="off" type="text" name="q_tel" data-error="Ошибка" data-value="ВАШ ТЕЛЕФОН"
 								class="input _phone _req">
 						</label>
-						<button type="submit" class="popup__block-form-btn btn-wrap"><span class="btn">Отправить</span></button>
+						<button id="q_send" type="submit" class="popup__block-form-btn btn-wrap"><span class="btn">Отправить</span></button>
 					</div>
 
 				</form>
@@ -83,9 +83,9 @@
 					<button id="q_prev" class="popup__control-btn popup__control-back q_prev">Назад</button>
 				</div>
 				<div class="popup__control-pagination q_steps d-flex">
-					<span class="popup__control-pagination-icon as active"></span>
-					<span class="popup__control-pagination-icon as"></span>
-					<span class="popup__control-pagination-icon all"></span>
+					<span class="popup__control-pagination-icon as_all as1 active"></span>
+					<span class="popup__control-pagination-icon as_all as2"></span>
+					<span class="popup__control-pagination-icon as_all as3 all"></span>
 				</div>
 				<div class="popup__control-btn-inner">
 					<button id="q_next" class="popup__control-btn popup__control-forward q_next">Далее</button>
