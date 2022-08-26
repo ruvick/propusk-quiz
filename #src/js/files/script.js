@@ -84,6 +84,17 @@ function stepDown() {
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".q_steps .all");//.innerHTML = stepCount;
 
+  let all_input = document.querySelectorAll(".options__input");
+
+  for (let i=0; i<all_input.length; i++)
+    all_input[i].onchange = (e) => {
+      e.preventDefault();
+      
+      setTimeout(()=>{
+        stepUp();
+      }, 300);
+    }
+
   q_next.onclick = (e) => {
     e.preventDefault();
     stepUp();
@@ -112,7 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
       xhr.onload = function(e) {
 
           if (xhr.status == 200) {
-              location.href = "/thanks.html"
+              // location.href = "/thanks.html"
+              popup_open("thenks");
           } else {
               console.log(xhr.status)
               console.log(xhr.statusText)

@@ -558,7 +558,8 @@ if (priceSlider) {
 
 					if (xhr.status == 200) {
 
-						location.href = "/thanks.html"
+						// location.href = "/thanks.html"
+						popup_open("thenks");
 
 					} else {
 						console.log(xhr.status)
